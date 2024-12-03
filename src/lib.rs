@@ -216,11 +216,11 @@ impl Plugin for Nyasynth {
         Arc::clone(&self.params) as Arc<dyn Params>
     }
 
-    fn task_executor(&self) -> TaskExecutor<Self> {
+    fn task_executor(&mut self) -> TaskExecutor<Self> {
         Box::new(|_| ())
     }
 
-    fn editor(&self, _async_executor: AsyncExecutor<Self>) -> Option<Box<dyn Editor>> {
+    fn editor(&mut self, _async_executor: AsyncExecutor<Self>) -> Option<Box<dyn Editor>> {
         ui::get_editor(self.params.clone(), self.envelope_amount.clone())
     }
 }

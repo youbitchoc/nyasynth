@@ -231,7 +231,7 @@ pub fn get_editor(
                         ColorImage::example()
                     }
                 };
-                cx.load_texture(name, image, egui::TextureFilter::Linear)
+                cx.load_texture(name, image, egui::TextureOptions::LINEAR)
             };
 
             let load_cat_image = |name: &str, image: &[u8]| -> TextureHandle {
@@ -248,7 +248,7 @@ pub fn get_editor(
                     }
                 };
                 // use nearest neighbor scaling for added Comedy
-                cx.load_texture(name, image, egui::TextureFilter::Nearest)
+                cx.load_texture(name, image, egui::TextureOptions::NEAREST)
             };
 
             let cat_images = &mut editor_state.cat_images;
@@ -402,7 +402,7 @@ pub fn get_editor(
                             color,
                             locs.cat_image.width(),
                         );
-                        painter.galley(locs.cat_image.left_top() + vec2(2.0, 2.0), galley);
+                        painter.galley(locs.cat_image.left_top() + vec2(2.0, 2.0), galley, Color32::BLACK);
                     }
                 });
         },

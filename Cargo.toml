@@ -11,8 +11,8 @@ edition = "2021"
 # This forked version is needed to expose some of nih-plug's internals, specifically so that perf.rs
 # can implement a minimal host. Additionally, this adds a method to ProcessContext to allow peeking
 # of events.
-nih_plug = { git = "https://github.com/a2aaron/nih-plug.git", rev = "2ecc194e461de1bdbc117d86449b2fb30fafb356", features = ["vst3", "standalone"]}
-nih_plug_egui = { git = "https://github.com/a2aaron/nih-plug.git", rev = "2ecc194e461de1bdbc117d86449b2fb30fafb356" }
+nih_plug = { git = "https://github.com/youbitchoc/nih-plug.git", rev = "92dc2f28974c31688b6b172bb680e5c539272ea0", features = ["vst3", "standalone"]}
+nih_plug_egui = { git = "https://github.com/youbitchoc/nih-plug.git", rev = "92dc2f28974c31688b6b172bb680e5c539272ea0" }
 # nih_plug = { path = "../nih-plug", features = ["vst3", "standalone"]}
 derive_more = "0.99"
 biquad = "0.4.0"
